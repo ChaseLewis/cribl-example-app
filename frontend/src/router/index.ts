@@ -10,6 +10,7 @@ const routes: Array<RouteConfig> = [
     name: 'Home',
     component: Home
   },
+  { path: '/file/download' }
   // {
   //   path: '/about',
   //   name: 'About',

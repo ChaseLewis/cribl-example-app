@@ -1,12 +1,13 @@
-All commands assume you start in the root of the root of the cloned directory.
+# HOW TO SETUP DEVELOPMENT ENVIRONMENT
+Make sure you have node.js installed, have confirmed it works with v14.16 but should be compatible with most recent versions.
 
-# SERVER SETUP
+## SERVER SETUP
 1. Open a new terminal and navigate to root
 2. cd server
 3. npm install (only must be done the first time)
 4. npm start
 
-# FRONTEND SETUP
+## FRONTEND SETUP
 1. Open a new terminal and navigate to root
 2. cd frontend 
 3. npm install (only must be done the first time)
