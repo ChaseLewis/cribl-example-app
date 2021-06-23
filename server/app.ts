@@ -93,7 +93,7 @@ router.post('/file/data', upload.single('data'), async (req,res) => {
     return;
   }
 
-  const targetPath = path.join(tempDirectory,req.body.fileId + `_${parseInt(req.body.chunkNumber)}`);
+  const targetPath = path.join(tempDirectory,req.body.fileId + `_${parseInt(req.body.chunkNumber).toString().padStart(15,'0')}`);
   await fs.rename(req.file.path,targetPath);
   res.status(200).end();
 });

@@ -49,15 +49,16 @@ export default class FileService {
         const maxChunkSize = 5*1024*1024;
         const chunkCount = Math.ceil(file.size / maxChunkSize);
         const fileId = await this.getFileId();
-
+        console.log(file.size);
         for(let i = 0;i < chunkCount;i++) {
 
             const start = i*maxChunkSize;
             let end = (i+1)*maxChunkSize;
-            if(end > file.size) {
+            if(end >= file.size) {
                 end = file.size;
             }
 
+            console.log(`start: ${start}, end: ${end}`)
             const chunkData = file.slice(start,end)
             await this.uploadChunk(chunkData,fileId, file.name, i);
 
